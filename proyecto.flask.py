@@ -37,6 +37,6 @@ def buscar(codigo):
         autor=doc.xpath("/biblioteca/libro[codigo/text()='%s']/autor/text()"%codigo)[0]
     else:
         abort(404)
-    return render_template("buscar.html",titulo=titulo,autor=autor)
+    return render_template("busqueda.html",titulo=titulo,autor=autor)
 
 app.run(debug=True)
