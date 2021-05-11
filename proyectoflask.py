@@ -1,6 +1,6 @@
-from flask import Flask, render_template, abort
+from Flask import Flask, render_template, abort
 from lxml import etree
-app = Flask (__name__)
+app = Flask(_name_)
 
 @app.route('/')
 def inicio():
