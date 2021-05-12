@@ -1,6 +1,6 @@
-from Flask import Flask, render_template, abort
-from lxml import etree
-app = Flask(_name_)
+from flask import Flask, render_template, abort
+from xml import etree
+app = Flask (__name__)
 
 @app.route('/')
 def inicio():
@@ -37,6 +37,6 @@ def buscar(codigo):
         autor=doc.xpath("/biblioteca/libro[codigo/text()='%s']/autor/text()"%codigo)[0]
     else:
         abort(404)
-    return render_template("busqueda.html",titulo=titulo,autor=autor)
+    return render_template("buscar.html",titulo=titulo,autor=autor)
 
 app.run(debug=True)
